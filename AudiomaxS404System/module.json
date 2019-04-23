@@ -1,0 +1,15 @@
+{
+        "id": "{781CA1F6-82D3-2718-49B4-7871FE94158B}",
+        "name": "AudioMaxServerS404",
+        "type": 2,
+        "vendor": "Obernsoft",
+        "aliases":
+        [
+                "AudioMax Server S404"
+        ],
+        "parentRequirements": ["{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}"],
+        "childRequirements": ["{169B085F-A7E8-A66D-70B7-EF9217217362}"],
+        "implemented": ["{018EF6B5-AB94-40C6-AA53-46943E824ACF}", "{96EA646A-F0D8-2515-4FFA-1039EAE71B93}"],
+        "prefix": "AMS404"
+}
+

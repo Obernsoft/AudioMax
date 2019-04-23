@@ -1,0 +1,15 @@
+{
+  "id": "{C854472D-2C2D-C9A0-DD6F-049DD1440CB3}",
+  "name": "AudiomaxServerS404Zone",
+  "type": 3,
+  "vendor": "Obernsoft",
+  "aliases":
+  [
+        "AudioMax Server S404 Zone"
+  ],
+  "parentRequirements": ["{96EA646A-F0D8-2515-4FFA-1039EAE71B93}"],
+  "childRequirements": [],
+  "implemented": ["{169B085F-A7E8-A66D-70B7-EF9217217362}"],
+  "prefix": "AMSZ"
+}
+

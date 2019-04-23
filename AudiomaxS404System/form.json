@@ -1,0 +1,22 @@
+{
+  "elements":
+  [
+	{ "type": "Label", "label": "Connection" },
+	{ "type": "Select", "name": "ConnectionType", "caption": "Type of connection",
+		"options": [
+			{ "label": "Serial", "value": 10 }
+		]
+	},
+
+        { "type": "CheckBox", "name": "SendKeepAlive", "caption": "Send KeepAlive" },
+
+        { "type": "CheckBox", "name": "SendAcknowledge", "caption": "Acknowledge Modus" },
+
+        { "type": "CheckBox", "name": "PowerRequest", "caption": "Request Power Room" },
+
+        { "type": "CheckBox", "name": "DebugMode", "caption": "Debug Mode" },
+
+
+  ]
+
+}
