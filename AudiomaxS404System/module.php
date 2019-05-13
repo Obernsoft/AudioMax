@@ -54,27 +54,30 @@
 		else {
 			$this->SetTimerInterval("KeepAliveTimer",0);
 		}
-                if($this->ReadPropertyBoolean("SendAcknowledge")) {
-                	$this->Send("EVT;SRV;MOD;0;0");
-                }
-                else {
-                	$this->Send("EVT;SRV;MOD;0;1");
-                }
 
-                if($this->ReadPropertyBoolean("DebugMode")) {
-                	$this->Send("EVT;SRV;MOD;1;0");
-                }
-                else {
-                	$this->Send("EVT;SRV;MOD;1;1");
-                }
+		if($this->HasActiveParent()) {
 
-                if($this->ReadPropertyBoolean("RequestPower")) {
-                	$this->Send("EVT;SRV;MOD;2;0");
-                }
-                else {
-                	$this->Send("EVT;SRV;MOD;2;1");
-                }
+			if($this->ReadPropertyBoolean("SendAcknowledge")) {
+				$this->Send("EVT;SRV;MOD;0;0");
+			}
+			else {
+				$this->Send("EVT;SRV;MOD;0;1");
+			}
 
+			if($this->ReadPropertyBoolean("DebugMode")) {
+				$this->Send("EVT;SRV;MOD;1;0");
+			}
+			else {
+				$this->Send("EVT;SRV;MOD;1;1");
+			}
+
+			if($this->ReadPropertyBoolean("RequestPower")) {
+				$this->Send("EVT;SRV;MOD;2;0");
+			}
+			else {
+				$this->Send("EVT;SRV;MOD;2;1");
+			}
+		}
 
 	}
 
