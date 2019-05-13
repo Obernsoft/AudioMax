@@ -14,8 +14,7 @@
 
         { "type": "CheckBox", "name": "PowerRequest", "caption": "Request Power Room" },
 
-        { "type": "CheckBox", "name": "DebugMode", "caption": "Debug Mode" },
-
+        { "type": "CheckBox", "name": "DebugMode", "caption": "Debug Mode" }
 
   ]
 
