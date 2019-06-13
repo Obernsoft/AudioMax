@@ -113,7 +113,7 @@
 
 	public function SetZoneVolume($Zone,$Value) {
 
-		$this->Send("SET;SVR;AUD;".$Zone.";VOL;".$Value);
+		$this->Send("SET;SVR;AUD;".$Zone.";VOL;".round(40-$Value));
 	}
 
 
