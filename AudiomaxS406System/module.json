@@ -1,0 +1,15 @@
+{
+        "id": "{DBA37017-532B-8269-B46F-6AF063589869}",
+        "name": "AudioMaxServerS406",
+        "type": 2,
+        "vendor": "ESERA",
+        "aliases":
+        [
+                "AudioMax Server S406"
+        ],
+        "parentRequirements": ["{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}"],
+        "childRequirements": ["{14802A3D-6B6D-F54E-47D6-EFC5700D7558}"],
+        "implemented": ["{018EF6B5-AB94-40C6-AA53-46943E824ACF}", "{2261C602-62C5-43DC-467F-7699B75E182E}"],
+        "prefix": "AMS406"
+}
+

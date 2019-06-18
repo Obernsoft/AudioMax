@@ -1,0 +1,15 @@
+{
+  "id": "{88002D78-2DA5-69E5-47EA-C9DAF499EE80}",
+  "name": "AudiomaxServerS406Zone",
+  "type": 3,
+  "vendor": "ESERA",
+  "aliases":
+  [
+        "AudioMax Server S406 Zone"
+  ],
+  "parentRequirements": ["{2261C602-62C5-43DC-467F-7699B75E182E}"],
+  "childRequirements": [],
+  "implemented": ["{14802A3D-6B6D-F54E-47D6-EFC5700D7558}"],
+  "prefix": "AMS6Z"
+}
+
