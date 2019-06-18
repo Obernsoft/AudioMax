@@ -104,18 +104,18 @@
 
         	switch($State) {
                 	case TRUE:
-        	        	$this->Send("SET;SVR;ROO;".$Zone.";1");
+        	        	$this->Send("SET,AUDIO,".$Zone.",AMP,1");
                           	break;
 
 			case FALSE:
-                        	$this->Send("SET;SVR;ROO;".$Zone.";0");
+                        	$this->Send("SET,AUDIO,".$Zone.",AMP,0");
 	                	break;
                  }
 	}
 
 	public function SetZoneVolume($Zone,$Value) {
 
-		$this->Send("SET;SVR;AUD;".$Zone.";VOL;".round(40-$Value));
+		$this->Send("SET,AUDIO,".$Zone.",VOL,round(40-$Value));
 	}
 
 
@@ -123,43 +123,43 @@
 
 			switch($State) {
 					case TRUE:
-							$this->Send("SET;SVR;AUD;".$Zone.";MUT;1");
+							$this->Send("SET,AUDIO,".$Zone.",MUT,1");
 							break;
 
 					case FALSE:
-							$this->Send("SET;SVR;AUD;".$Zone.";MUT;0");
+							$this->Send("SET,AUDIO,".$Zone.",MUT,0");
 							break;
 			 }
 	}
 
 	public function SetZoneInput($Zone,$Value) {
 
-		$this->Send("SET;SVR;AUD;".$Zone.";INP;".$Value);
+		$this->Send("SET,AUDIO,".$Zone.",INP,".$Value);
 	}
 
 	public function SetZoneGain($Zone,$Value) {
 
-		$this->Send("SET;SVR;AUD;".$Zone.";GAI;".$Value);
+		$this->Send("SET,AUDIO,".$Zone.",GAI,".$Value);
 	}
 
 	public function SetZoneBalance($Zone,$Value) {
 
-		$this->Send("SET;SVR;AUD;".$Zone.";BAL;".$Value);
+		$this->Send("SET,AUDIO,".$Zone.",BAL,".$Value);
 	}
 
 	public function SetZoneBass($Zone,$Value) {
 
-		$this->Send("SET;SVR;AUD;".$Zone.";BAS;".$Value);
+		$this->Send("SET,AUDIO,".$Zone.",BAS,".$Value);
 	}
 
 	public function SetZoneMiddle($Zone,$Value) {
 
-		$this->Send("SET;SVR;AUD;".$Zone.";MID;".$Value);
+		$this->Send("SET,AUDIO,".$Zone.",MID,".$Value);
 	}
 
 	public function SetZoneTreble($Zone,$Value) {
 
-		$this->Send("SET;SVR;AUD;".$Zone.";TRE;".$Value);
+		$this->Send("SET,AUDIO,".$Zone.",TRE,".$Value);
 	}
 
 

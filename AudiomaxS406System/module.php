@@ -79,11 +79,11 @@
 			case "Power":
 				switch($Value) {
 					case TRUE:
-						$this->Send("SET;SYS;PWR;1");
+						$this->Send("SET,SYS,PWR,1");
 						break;
 
 					case FALSE:
-						$this->Send("SET;SYS;PWR;0");
+						$this->Send("SET,SYS,PWR,0");
 						break;
 				}
 				SetValue($this->GetIDForIdent("Power"), $Value);
@@ -156,9 +156,9 @@
 				break;
 
 			case "AUDIO":
-						$Zone = $dataArray[3];
-						$AudioType = $dataArray[4];
-						$AudioValue = $dataArray[5];
+						$Zone = $dataArray[1];
+						$AudioType = $dataArray[2];
+						$AudioValue = $dataArray[3];
 						$this->SendDataToChildren(json_encode(Array("DataID" => "{14802A3D-6B6D-F54E-47D6-EFC5700D7558}", "Zone" => $Zone, "AudioType" => $AudioType, "AudioValue" => $AudioValue)));
 
 						break;
@@ -189,5 +189,7 @@
 		}
 	}
 
+
+	}
 
 ?>
