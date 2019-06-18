@@ -6,7 +6,7 @@
 	        //Never delete this line!
 	        parent::Create();
 
-		$this->RegisterPropertyInteger("Zone",0);
+		$this->RegisterPropertyInteger("Zone",1);
 
 		$this->CreateVariableProfile("S406.AudioMaxVolume",1,"%",0,40,1,0,"Intensity");
 		$this->CreateVariableProfile("S406.AudioMaxGain",1,"%",0,15,1,0,"Intensity");
