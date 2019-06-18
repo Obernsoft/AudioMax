@@ -67,17 +67,17 @@
 
                 switch($Ident){
                         case "Power":
-				$this->SetZonePower($Zone,$Value);
+								$this->SetZonePower($Zone,$Value);
                                 break;
                         case "Volume";
                                 $this->SetZoneVolume($Zone,$Value);
                                 break;
-			case "Mute":
-				$this->SetZoneMute($Zone,$Value);
-				break;
-			case "Input";
-				$this->SetZoneInput($Zone,$Value);
-				break;
+						case "Mute":
+							$this->SetZoneMute($Zone,$Value);
+							break;
+						case "Input";
+							$this->SetZoneInput($Zone,$Value);
+							break;
                         case "Gain";
                                 $this->SetZoneGain($Zone,$Value);
                                 break;
@@ -115,7 +115,7 @@
 
 	public function SetZoneVolume($Zone,$Value) {
 
-		$this->Send("SET,AUDIO,".$Zone.",VOL,round(40-$Value));
+		$this->Send("SET,AUDIO,".$Zone.",VOL,".round(40-$Value));
 	}
 
 
@@ -213,8 +213,11 @@
 					SetValue($this->GetIDForIdent("Balance"), $Value);
 					break;
 
+				case "AMP":
+					break;
+
 				default:
-					IPS_LogMessage("AMS404Zone","Unknown SET Audiotype: ".$Type);
+					IPS_LogMessage("AMS406Zone","Unknown SET Audiotype: ".$Type);
 					break;
 			}
 		}
@@ -239,3 +242,4 @@
 
     }
 ?>
+
