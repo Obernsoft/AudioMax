@@ -6,8 +6,6 @@
             parent::Create();
 
 		$this->RegisterPropertyInteger("ConnectionType", 10);
-		//$this->RegisterPropertyString("DataOutputType", "AUDIO");
-		//$this->RegisterPropertyInteger("AudioMaxID", 1);
 		$this->RegisterPropertyBoolean("SendKeepAlive", false);
 		$this->RegisterPropertyInteger("SendKeepAliveInterval", 60);
 
@@ -17,8 +15,7 @@
 
 		//$this->RegisterPropertyBoolean("ReceiveKeepAlive", false);
 		//$this->RegisterPropertyInteger("ReceiveKeepAliveInterval", 0);
-
-        	$this->RegisterPropertyString("Serialport", "{6DC3D946-0D31-450F-A8C6-C42DB8D7D4F1}"); // SerialPort
+        //$this->RegisterPropertyString("Serialport", "{6DC3D946-0D31-450F-A8C6-C42DB8D7D4F1}"); // SerialPort
 
 		$this->RegisterVariableBoolean("Power", "Main Power", "~Switch",0);
 	        $this->EnableAction("Power");
@@ -213,7 +210,8 @@
 			return "{\"BaudRate\": \"19200\", \"StopBits\": \"1\", \"DataBits\": \"8\", \"Parity\": \"None\"}";
 		}
 		else if ($this->ReadPropertyInteger("ConnectionType") == 20) {
-			return "{\"Port\": \"5000\"}";
+			//return "{\"Port\": \"5000\"}";
+			return "";
 		}
 		else {
 			return "";

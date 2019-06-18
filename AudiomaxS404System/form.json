@@ -4,7 +4,8 @@
 	{ "type": "Label", "label": "Connection" },
 	{ "type": "Select", "name": "ConnectionType", "caption": "Type of connection",
 		"options": [
-			{ "label": "Serial", "value": 10 }
+			{ "label": "Serial", "value": 10 },
+			{ "label": "Ethernet", "value": 20 }
 		]
 	},
 
