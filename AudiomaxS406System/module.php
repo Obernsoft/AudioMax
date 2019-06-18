@@ -50,10 +50,10 @@
 		if($this->HasActiveParent()) {
 
 			if($this->ReadPropertyBoolean("SendAcknowledge")) {
-				$this->Send("EVT;SRV;MOD;0;0");
+				$this->Send("SET,SYS,ECHO,0");
 			}
 			else {
-				$this->Send("EVT;SRV;MOD;0;1");
+				$this->Send("SET,SYS,ECHO,1");
 			}
 
 			if($this->ReadPropertyBoolean("DebugMode")) {
@@ -64,10 +64,10 @@
 			}
 
 			if($this->ReadPropertyBoolean("RequestPower")) {
-				$this->Send("EVT;SRV;MOD;2;0");
+				$this->Send("SET,SYS,PUSHBUTTON,0");
 			}
 			else {
-				$this->Send("EVT;SRV;MOD;2;1");
+				$this->Send("SET,SYS,PUSHBUTTON,1");
 			}
 		}
 
@@ -139,20 +139,27 @@
 						$this->RegisterVariableInteger("KAL","KAL","",1);
 						SetValue($this->GetIDForIdent("KAL"),$dataArray[2]);
 						break;
-					case "HAR":
-						$this->RegisterVariableString("HAR","HAR","",1);
-						SetValue($this->GetIDForIdent("HAR"),$dataArray[2]);
-						break;
-					case "VER":
-						$this->RegisterVariableString("VER","VER","",1);
-						SetValue($this->GetIDForIdent("VER"),$dataArray[2]);
-						break;
 					default:
 						break;
 				}
 				break;
 
 			case "SYS":
+				$command = $dataArray[1];
+
+				switch($command) {
+					case "HW":
+						$this->RegisterVariableString("HW","HW","",1);
+						SetValue($this->GetIDForIdent("HW"),$dataArray[2]);
+						break;
+					case "FW":
+						$this->RegisterVariableString("FW","FW","",1);
+						SetValue($this->GetIDForIdent("FW"),$dataArray[2]);
+						break;
+
+					default:
+						break;
+				}
 				break;
 
 			case "AUDIO":
@@ -173,7 +180,8 @@
 	}
 
 	public function GetSysInfo() {
-		// to Do
+		$this->Send("GET,SYS,HW");
+		$this->Send("GET,SYS,FW");
 	}
 
 	public function GetConfigurationForParent() {
