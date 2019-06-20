@@ -13,7 +13,7 @@
 
         { "type": "CheckBox", "name": "SendAcknowledge", "caption": "Acknowledge Modus" },
 
-        { "type": "CheckBox", "name": "PowerRequest", "caption": "Request Power Room" },
+        { "type": "CheckBox", "name": "RequestPower", "caption": "Request Power Room" },
 
         { "type": "CheckBox", "name": "DebugMode", "caption": "Debug Mode" }
 

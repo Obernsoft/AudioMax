@@ -50,10 +50,10 @@
 		if($this->HasActiveParent()) {
 
 			if($this->ReadPropertyBoolean("SendAcknowledge")) {
-				$this->Send("SET,SYS,ECHO,0");
+				$this->Send("SET,SYS,ECHO,1");
 			}
 			else {
-				$this->Send("SET,SYS,ECHO,1");
+				$this->Send("SET,SYS,ECHO,0");
 			}
 
 			if($this->ReadPropertyBoolean("DebugMode")) {

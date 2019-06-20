@@ -12,15 +12,13 @@
 		$this->CreateVariableProfile("S406.AudioMaxGain",1,"%",0,15,1,0,"Intensity");
 		$this->CreateVariableProfile("S406.AudioMaxTone",1,"%",0,15,1,0,"Intensity");
 		$this->CreateVariableProfile("S406.AudioMaxBalance",1,"%",0,15,1,0,"Intensity");
-		$this->CreateVariableProfile("S406.AudioMaxInput",1,"",0,5,1,0,"");
+		$this->CreateVariableProfile("S406.AudioMaxInput",1,"",0,3,1,0,"");
 		$this->CreateVariableProfile("S406.AudioMaxMute",0,"",0,1,1,0,"Power");
 
 		$this->CreateVariableAssociation("S406.AudioMaxInput", 0, "Input 1", "Light" , 0x00FF00);
 		$this->CreateVariableAssociation("S406.AudioMaxInput", 1, "Input 2", "Light" , 0x00FF00);
 		$this->CreateVariableAssociation("S406.AudioMaxInput", 2, "Input 3", "Light" , 0x00FF00);
 		$this->CreateVariableAssociation("S406.AudioMaxInput", 3, "Input 4", "Light" , 0x00FF00);
-		$this->CreateVariableAssociation("S406.AudioMaxInput", 4, "Input 5", "Light" , 0x00FF00);
-		$this->CreateVariableAssociation("S406.AudioMaxInput", 5, "Input 6", "Light" , 0x00FF00);
 
 		$this->RegisterVariableBoolean("Power", "Room Power", "~Switch",1);
 	        $this->EnableAction("Power");
@@ -115,7 +113,7 @@
 
 	public function SetZoneVolume($Zone,$Value) {
 
-		$this->Send("SET,AUDIO,".$Zone.",VOL,".round(40-$Value));
+		$this->Send("SET,AUDIO,".$Zone.",VOL,".round($Value));
 	}
 
 
