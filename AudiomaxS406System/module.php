@@ -176,7 +176,7 @@
 	}
 
 	public function SendKeepAliveHeartbeat() {
-		$this->Send("SET,SRV,KAL,1");
+		$this->Send("SET,KAL,0");
 	}
 
 	public function GetSysInfo() {
