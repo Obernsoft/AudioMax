@@ -98,7 +98,7 @@
         }
 
 
-	public function SetZonePower($Zone,$State) {
+	public function SetZonePower(int $Zone, int $State) {
 
         	switch($State) {
                 	case TRUE:
@@ -111,13 +111,13 @@
                  }
 	}
 
-	public function SetZoneVolume($Zone,$Value) {
+	public function SetZoneVolume(int $Zone,int $Value) {
 
 		$this->Send("SET,AUDIO,".$Zone.",VOL,".round($Value));
 	}
 
 
-	public function SetZoneMute($Zone,$State) {
+	public function SetZoneMute(int $Zone,int $State) {
 
 			switch($State) {
 					case TRUE:
@@ -130,32 +130,32 @@
 			 }
 	}
 
-	public function SetZoneInput($Zone,$Value) {
+	public function SetZoneInput(int $Zone,int $Value) {
 
 		$this->Send("SET,AUDIO,".$Zone.",INP,".$Value);
 	}
 
-	public function SetZoneGain($Zone,$Value) {
+	public function SetZoneGain(int $Zone,int $Value) {
 
 		$this->Send("SET,AUDIO,".$Zone.",GAI,".$Value);
 	}
 
-	public function SetZoneBalance($Zone,$Value) {
+	public function SetZoneBalance(int $Zone,int $Value) {
 
 		$this->Send("SET,AUDIO,".$Zone.",BAL,".$Value);
 	}
 
-	public function SetZoneBass($Zone,$Value) {
+	public function SetZoneBass(int $Zone,int $Value) {
 
 		$this->Send("SET,AUDIO,".$Zone.",BAS,".$Value);
 	}
 
-	public function SetZoneMiddle($Zone,$Value) {
+	public function SetZoneMiddle(int $Zone,int $Value) {
 
 		$this->Send("SET,AUDIO,".$Zone.",MID,".$Value);
 	}
 
-	public function SetZoneTreble($Zone,$Value) {
+	public function SetZoneTreble(int $Zone,int $Value) {
 
 		$this->Send("SET,AUDIO,".$Zone.",TRE,".$Value);
 	}
@@ -175,6 +175,8 @@
 		$Zone = intval($data->Zone, 10);
 		$Type = $data->AudioType;
 		$Value = intval($data->AudioValue,10);
+
+//echo "Z: $Zone, Typ: $Type, Val: $Value";
 
 		if($this->ReadPropertyInteger("Zone")==$Zone) {
 
