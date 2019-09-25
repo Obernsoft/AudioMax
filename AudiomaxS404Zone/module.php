@@ -165,7 +165,7 @@
 
 	public function Send($Text)
 	{
-		$this->SendDataToParent(json_encode(Array("DataID" => "{2261C602-62C5-43DC-467F-7699B75E182E}", "Buffer" => $Text.chr(13))));
+		$this->SendDataToParent(json_encode(Array("DataID" => "{96EA646A-F0D8-2515-4FFA-1039EAE71B93}", "Buffer" => $Text.chr(13))));
 	}
 
 	public function ReceiveData($JSONString)
