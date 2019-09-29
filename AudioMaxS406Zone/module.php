@@ -163,7 +163,7 @@
 
 
 
-	public function Send($Text)
+	public function Send(string $Text)
 	{
 		$this->SendDataToParent(json_encode(Array("DataID" => "{2261C602-62C5-43DC-467F-7699B75E182E}", "Buffer" => $Text.chr(13))));
 	}

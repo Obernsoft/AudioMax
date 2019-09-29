@@ -98,7 +98,7 @@
         }
 
 
-	public function SetZonePower($Zone,$State) {
+	public function SetZonePower(int $Zone,int $State) {
 
         	switch($State) {
                 	case TRUE:
@@ -111,13 +111,13 @@
                  }
 	}
 
-	public function SetZoneVolume($Zone,$Value) {
+	public function SetZoneVolume(int $Zone,int $Value) {
 
 		$this->Send("SET;SVR;AUD;".$Zone.";VOL;".round(40-$Value));
 	}
 
 
-        public function SetZoneMute($Zone,$State) {
+        public function SetZoneMute(int $Zone,int $State) {
 
                 switch($State) {
                         case TRUE:
@@ -130,32 +130,32 @@
                  }
         }
 
-	public function SetZoneInput($Zone,$Value) {
+	public function SetZoneInput(int $Zone,int $Value) {
 
 		$this->Send("SET;SVR;AUD;".$Zone.";INP;".$Value);
 	}
 
-	public function SetZoneGain($Zone,$Value) {
+	public function SetZoneGain(int $Zone,int $Value) {
 
 		$this->Send("SET;SVR;AUD;".$Zone.";GAI;".$Value);
 	}
 
-	public function SetZoneBalance($Zone,$Value) {
+	public function SetZoneBalance(int $Zone,int $Value) {
 
 		$this->Send("SET;SVR;AUD;".$Zone.";BAL;".$Value);
 	}
 
-	public function SetZoneBass($Zone,$Value) {
+	public function SetZoneBass(int $Zone,int $Value) {
 
 		$this->Send("SET;SVR;AUD;".$Zone.";BAS;".$Value);
 	}
 
-	public function SetZoneMiddle($Zone,$Value) {
+	public function SetZoneMiddle(int $Zone,int $Value) {
 
 		$this->Send("SET;SVR;AUD;".$Zone.";MID;".$Value);
 	}
 
-	public function SetZoneTreble($Zone,$Value) {
+	public function SetZoneTreble(int $Zone,int $Value) {
 
 		$this->Send("SET;SVR;AUD;".$Zone.";TRE;".$Value);
 	}
@@ -163,7 +163,7 @@
 
 
 
-	public function Send($Text)
+	public function Send(string $Text)
 	{
 		$this->SendDataToParent(json_encode(Array("DataID" => "{96EA646A-F0D8-2515-4FFA-1039EAE71B93}", "Buffer" => $Text.chr(13))));
 	}
